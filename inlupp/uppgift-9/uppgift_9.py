@@ -1,23 +1,17 @@
 # Uppgift 9
-# Skapa en funktion is_palindrome(string) som kontrollerar om en
-#  given sträng är ett palindrom (dvs. samma framifrån och bakifrån).
- 
- 
-def is_palindrome(string: str) -> dict:
-    letter_count = {}  
-   
-    for char in string:  
-        if char.isalpha():   
-            char = char.lower()
-            if char in letter_count:  
-                letter_count[char] += 1
-            else:  
-                letter_count[char] = 1
-   
-    return letter_count
- #skapar en funktion för att kolla som värdet är samma åt båda hållen
- 
-print(is_palindrome(""))  
-print(is_palindrome("radar"))  
-print(is_palindrome("python"))
+# Skapa en funktion is_palindrome(string) som kontrollerar om en given sträng är ett palindrom (dvs. samma framifrån och bakifrån).
 
+def is_palindrome(string: str) -> bool:
+
+    #tar bort mellanslag, punkt, komma tecken osv och gör alla till små bokstäver
+
+    cleaned_string = ''.join(char.lower() for char in string if char.isalnum())
+
+    
+    return cleaned_string == cleaned_string[::-1]
+#skapar en omvänd kopia
+
+ #returnerar True om strängen är ett palindrom annars false
+print(is_palindrome("radar")) 
+print(is_palindrome("python")) 
+print(is_palindrome(""))  
