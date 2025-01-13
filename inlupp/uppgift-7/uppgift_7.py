@@ -7,16 +7,17 @@ def validate_password(password: str) -> bool:
         return False
    
 
-    if not any(char.isdigit() for char in password): #Lösenordet ska innehålla en siffra minst
+    if not any(char.isdigit() for char in password): 
         return False
-    
+
+ #Lösenordet ska innehålla minst en siffra annars returneras false
     #char.isdigt kollar om det finns en siffra
     #for char in password går igenom varje tecken i lösenordet
     #any kollar om det är true
  
  
     return True 
-#Returneras True ifall båda villkoren är korrekt
+#om båda kraven är korrekt så returneras True
  
  
 print(validate_password("abc12345"))
