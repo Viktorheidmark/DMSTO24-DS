@@ -17,16 +17,3 @@ def fibonacci(n: int) -> list:
 print(fibonacci(5))
 print(fibonacci(0))
 print(fibonacci(1))
-
-'''
-   elif n == 2:        
-        return [0, 1] 
-Else: 
-list_fib = [0, 1]
-for i in range (2, n):
-    print(f"index är: {1}")
-list_fib.append
-(list_fib (1 - 1) + list_fib (1 - 2)
-)
-return list_fib
-'''
