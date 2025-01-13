@@ -7,7 +7,7 @@ def count_letters(string: str) -> dict:
 
     letter_count = {}  # Skapar en tom dictionary 
 
-    for char in string:  #Upprepar och går igenom varje tecken i strängen
+    for char in string:  #Går igenom varje tecken i strängen
         if char.isalpha():  
             char = char.lower()  
             if char in letter_count:
